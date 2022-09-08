@@ -13,4 +13,15 @@ class DogsController < ApplicationController
   def new
     render 'dogs/new'
   end
+
+  def create
+    dog = Dog.new(
+      name: params[:name],
+      breed: params[:breed],
+      age: params[:age],
+      image_url: params[:image_url]
+    )
+    dog.save
+    redirect_to "/dogs"
+  end
 end
