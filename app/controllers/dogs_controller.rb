@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
 
   def index
-    @name = 'Fido'
+    @dogs = Dog.all
     render 'dogs/index'
   end
 end
