@@ -2,16 +2,16 @@ class DogsController < ApplicationController
 
   def index
     @dogs = Dog.all
-    render 'dogs/index'
+    render "/dogs/index"
   end
 
   def show
     @dog = Dog.find_by(id: params[:id])
-    render 'dogs/show'
+    render "/dogs/show"
   end
   
   def new
-    render 'dogs/new'
+    render "/dogs/new"
   end
 
   def create
@@ -23,5 +23,9 @@ class DogsController < ApplicationController
     )
     dog.save
     redirect_to "/dogs"
+  end
+
+  def edit
+    render "/dogs/edit"
   end
 end
