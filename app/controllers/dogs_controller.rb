@@ -9,4 +9,8 @@ class DogsController < ApplicationController
     @dog = Dog.find_by(id: params[:id])
     render 'dogs/show'
   end
+  
+  def new
+    render 'dogs/new'
+  end
 end
