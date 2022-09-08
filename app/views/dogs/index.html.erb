@@ -1,9 +1,7 @@
 <h1>This is the dogs index page!!</h1> 
 
 <% @dogs.each do |dog| %>
-<p> <%= dog.name %> </p>
-<p> <%= dog.age %> </p>
-<p> <%= dog.breed %> </p>
+<p>name: <a href="/dogs/<%= dog.id %>"><%= dog.name %></a> </p>
 <img src="<%= dog.image_url%>" >
 <hr/>
 <% end %>
